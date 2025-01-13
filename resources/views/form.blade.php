@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Buat Account Baru</h1>
-    <form action="/welcome" method="GET">
+    <form action="welcome" method="GET">
       <h3>Sign Up Form</h3>
       <label for="nama_awal">First name :</label><br />
       <input type="text" id="nama_awal" name="nama_awal" /><br /><br />
