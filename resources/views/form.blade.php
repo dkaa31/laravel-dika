@@ -1,45 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Pengisian</title>
-  </head>
-  <body>
-    <h1>Buat Account Baru</h1>
-    <form action="welcome" method="GET">
-      <h3>Sign Up Form</h3>
-      <label for="nama_awal">First name :</label><br />
-      <input type="text" id="nama_awal" name="nama_awal" /><br /><br />
-      <label for="nama_akhir">Last name :</label><br />
-      <input type="text" id="nama_akhir" name="nama_akhir" /><br /><br />
+@extends('template.master')
 
-      <label>Gender</label><br /><br />
-      <input type="radio" id="Laki" name="Gender" value="Laki-Laki" />
-      <label for="Laki">Male</label><br />
-      <input type="radio" id="cewe" name="Gender" value="cewe" />
-      <label for="cewe">Female</label><br /><br />
+@section('judul', 'Form')
 
-      <label for="Nasional">Nationality</label><br /><br />
-      <select name="Nasional" id="Nasional">
-        <option value="Indonesia">Indonesia</option>
-        <option value="Rengasdengklok">Rengasdengklok</option>
-        <option value="Malaysia">Malaysia</option></select
-      ><br /><br />
-      <label>Langueage Spoken</label><br /><br />
+@section('conten')
 
-      <input type="checkbox" name="bahasa" id="indo" value="bahasa" />
-      <label for="indo">Bahasa Indonesia</label><br />
+          <!-- left column -->
+<div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Quick Example</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                  <label for="namaGenre">Nama Genre</label>
+                  <input type="text" class="form-control" id="namaGenre" name="nama" placeholder="Masukkan Nama Genre">
+                  </div>
+                </div>
+                <!-- /.card-body -->
 
-      <input type="checkbox" name="bahasa" id="inggris" value="inggris" />
-      <label for="inggris">English</label><br />
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+              </form>
+            </div>
 
-      <input type="checkbox" name="bahasa" id="outher" value="outher" />
-      <label for="outher">Outher</label><br /><br />
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Form Film</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="judul">Judul Film</label>
+                    <input type="text" class="form-control" id="judul" placeholder="Masukan Judul">
+                  </div>
+                  <div class="form-group">
+                    <label for="ringkasan">Ringkasan</label>
+                    <input type="text" class="form-control" id="ringkasan" placeholder="Masukin Ringkasan">
+                  </div>
+                  <div class="form-group">
+                    <label for="tahun">Tahun</label>
+                    <input type="number" class="form-control" id="tahun" placeholder="Masukin Tahun">
+                  </div>
+                  <div class="form-group">
+                    <label for="poster">Poster</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="poster">
+                        <label class="custom-file-label" for="poster">Pilih File</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Unggah</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                </div>
+                <!-- /.card-body -->
 
-      <label for="bio">Bio</label><br /><br />
-      <textarea name="bio" id="bio" rows="10" cols="30"></textarea><br />
-      <input type="submit" value="Sign Up" />
-    </form>
-  </body>
-</html>
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Kirim</button>
+                </div>
+              </form>
+            </div>
+</div>
+            <!-- /.card -->
+@endsection
